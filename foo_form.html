@@ -1,0 +1,11 @@
+
+<!-- Among other things on the page... -->
+
+<form action="{% url 'myApp:addFoo' %}" method='POST'>
+  {% csrf_token %}
+  <input type="text" name="foo_name">
+  <input type="text" name="address">
+  <input type="hidden" name="id_of_related_thing" value={{ related_thing.id }}>
+
+  <input type="submit" value="Save Foo">
+</form>
